@@ -29,7 +29,7 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                <div>
+                <div className={styles.navActionButtons}>
                     <SecondaryRoundedButton text={"Connexion"} icon={<FaUser size={15} />} />
                     <PrimaryRoundedButton text={"Inscription"} />
                 </div>

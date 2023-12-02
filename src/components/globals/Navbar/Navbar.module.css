@@ -192,3 +192,9 @@
     gap: 8px;
     align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+    .navActionButtons {
+        display: none !important;
+    }
+}
