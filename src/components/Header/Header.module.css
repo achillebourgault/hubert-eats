@@ -1,0 +1,85 @@
+.header {
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.headerBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.headerContent {
+    padding-left: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.headerContent > span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--secondary-text);
+}
+
+.headerContent > span a {
+    border-bottom: 1px solid var(--black);
+}
+
+.headerContent > h1 {
+    font-size: 3.45rem;
+    font-weight: 700;
+    letter-spacing: -0.08rem;
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+    width: min(76vw, 900px);
+}
+
+.headerSearchInput {
+    position: relative;
+}
+
+.headerSearch {
+    display: inline-flex;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.headerSearch input {
+    width: 535px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    padding: 26px 12px 26px 44px;
+    font-size: 1.08rem;
+    font-weight: 500;
+    background-image: linear-gradient(to bottom, var(--white), var(--white)), linear-gradient(to bottom, var(--blue), var(--blue));
+    background-position: calc(100% - 10px) 50%, calc(100% - 5px) 50%;
+    color: var(--secondary-text);
+    transition: background-position 0.2s ease-in-out;
+}
+
+.headerSearch input:focus {
+    background-position: calc(100% - 10px) 50%, calc(100% - 5px) 50%;
+    transition: background-position 0.2s ease-in-out;
+    outline: none;
+}
+
+.headerSearchInputIcon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

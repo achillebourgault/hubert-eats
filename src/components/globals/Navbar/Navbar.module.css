@@ -1,15 +1,18 @@
 .navbarWrapper {
     width: 100%;
-    position: relative;
+    top: 0;
+    position: fixed;
+    z-index: 1;
 }
 
 .navbar {
-    height: 68px;
+    height: 72px;
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    position: relative;
 }
 
 .navbarLogo {
@@ -24,7 +27,7 @@
 
 .navbar > div {
     display: inline-flex;
-    gap: 30px;
+    gap: 16px;
 }
 
 .navbarMenuButton {
@@ -112,7 +115,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(75, 75, 75, 0.6);
+    background: rgba(75, 75, 75, 0.8);
     z-index: 2;
 }
 
