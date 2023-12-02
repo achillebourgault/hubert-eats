@@ -11,6 +11,7 @@ import TertiaryRoundedButton from "@/components/globals/Buttons/TertiaryRoundedB
 
 export default function Navbar() {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const [navbarRequestClose, setNavbarRequestClose] = useState(false);
 
     return (
         <div className={styles.navbarWrapper}>
@@ -35,8 +36,8 @@ export default function Navbar() {
 
             </div>
 
-            <div className={`${styles.navbarMenuWrapper} ${navbarOpen ? styles.navOpen : styles.navClosed}`}>
-                <div className={`${styles.navbarMenu}`}>
+            <div className={`${styles.navbarMenuWrapper} ${navbarOpen && !navbarRequestClose ? styles.navOpen : styles.navClosed}`}>
+                <div className={`${styles.navbarMenu} ${navbarOpen && !navbarRequestClose  ? styles.navMenuOpen : styles.navMenuClosed}`}>
                     <div className={styles.menuHead}>
                         <PrimaryButton text={"Inscription"} />
                         <SecondaryButton text={"Connexion"} />
@@ -59,7 +60,13 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                <div className={styles.navbarMenuOverlay} onClick={() => setNavbarOpen(false)}></div>
+                <div className={styles.navbarMenuOverlay} onClick={() => {
+                    setNavbarRequestClose(true);
+                    setTimeout(() => {
+                        setNavbarOpen(false);
+                        setNavbarRequestClose(false);
+                    }, 350);
+                }}></div>
             </div>
 
         </div>
