@@ -1,0 +1,135 @@
+.navbarWrapper {
+    width: 100%;
+    position: relative;
+}
+
+.navbar {
+    height: 68px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbarLogo {
+    font-size: 1.46rem;
+    font-weight: 500;
+}
+
+.navbarLogo b {
+    font-size: 1.66rem;
+    font-weight: 800;
+}
+
+.navbar > div {
+    display: inline-flex;
+    gap: 30px;
+}
+
+.navbarMenuButton {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarSearch {
+    display: none;
+    opacity: 0;
+    width: 140px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarSearch > input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.08rem;
+    font-weight: 500;
+    background-color: var(--secondary-bg);
+    color: var(--secondary-text);
+}
+
+.navbarMenuWrapper {
+    display: none;
+    opacity: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.navOpen {
+    display: flex;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.navbarMenuWrapper .navbarMenuOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(75, 75, 75, 0.6);
+    z-index: 2;
+}
+
+.navbarMenu {
+    background: var(--white);
+    height: 100vh;
+    width: var(--navbar-menu-width);
+    position: relative;
+    z-index: 3;
+    padding: 22px;
+}
+
+.menuHead {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 26px;
+}
+
+.menuBody {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.menuBody a {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--gray);
+}
+
+.downloadApp {
+    bottom: 0;
+    position: absolute;
+    padding-bottom: 50px;
+    padding-right: 22px;
+}
+
+.downloadAppHead {
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 0.94rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.downloadAppBody {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
