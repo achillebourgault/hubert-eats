@@ -5,6 +5,8 @@ import styles from '@/styles/Home.module.css'
 import Navbar from "@/components/globals/Navbar/Navbar";
 import Header from "@/components/Header/Header";
 import InfoGrid from "@/components/index/InfoGrid/InfoGrid";
+import CityProximity from "@/components/index/CityProximity/CityProximity";
+import Footer from "@/components/globals/Footer/Footer";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +23,8 @@ export default function Home() {
           <Navbar />
           <Header />
           <InfoGrid />
+          <CityProximity />
+          <Footer />
       </main>
     </>
   )
