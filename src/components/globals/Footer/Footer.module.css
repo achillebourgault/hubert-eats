@@ -1,0 +1,100 @@
+.footer {
+    width: 100%;
+}
+
+.footerTop {
+    display: inline-flex;
+}
+
+.footerBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 72px !important;
+}
+
+.footerBottom, .footerTop {
+    width: 100%;
+    padding: 52px 42px;
+}
+
+.footerTop {
+    border-bottom: 0.002rem solid var(--grey);
+}
+
+.head {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.head span {
+    font-size: 1.46rem;
+    font-weight: 500;
+}
+
+.body {
+    width: 50%;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.links a {
+    font-size: 0.98rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.footer .head .download {
+    display: inline-flex;
+    gap: 16px;
+}
+
+.bottomHead {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.socials {
+    display: inline-flex;
+    gap: 12px;
+    color: var(--secondary-text);
+}
+
+.legal {
+    display: inline-flex;
+    gap: 38px;
+    color: var(--secondary-text);
+}
+
+.legal a, .bottomBody span {
+    font-size: 0.84rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    align-items: flex-end;
+}
+
+.legal a:hover {
+    border-bottom: 1px solid var(--secondary-text);
+}
+
+.bottomBody {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bottomBody div {
+    display: inline-flex;
+    gap: 28px;
+}
