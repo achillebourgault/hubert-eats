@@ -13,6 +13,21 @@
     align-items: center;
     padding: 0 20px;
     position: relative;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.navFixed {
+    background-color: var(--white);
+    animation: navFixed 0.2s ease-in-out forwards;
+}
+
+@keyframes navFixed {
+    0% {
+        box-shadow: var(--grey) 0px 0px 0px inset;
+    }
+    100% {
+        box-shadow: var(--grey) 0px -0.12rem 0px inset;
+    }
 }
 
 .navbarLogo {

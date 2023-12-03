@@ -1,6 +1,6 @@
 import styles from './Navbar.module.css';
 import {FaAndroid, FaApple, FaBars, FaUser} from "react-icons/fa";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 import Image from "next/image";
 import SecondaryRoundedButton from "@/components/globals/Buttons/SecondaryRoundedButton/SecondaryRoundedButton";
@@ -10,12 +10,33 @@ import SecondaryButton from "@/components/globals/Buttons/SecondaryButton/Second
 import TertiaryRoundedButton from "@/components/globals/Buttons/TertiaryRoundedButton/TertiaryRoundedButton";
 
 export default function Navbar() {
+    const [navbarScrolled, setNavbarScrolled] = useState(false);
     const [navbarOpen, setNavbarOpen] = useState(false);
     const [navbarRequestClose, setNavbarRequestClose] = useState(false);
 
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 0) {
+                setNavbarScrolled(true);
+            } else {
+                setNavbarScrolled(false);
+            }
+        });
+
+        return () => {
+            window.removeEventListener("scroll", () => {
+                if (window.scrollY > 0) {
+                    setNavbarScrolled(true);
+                } else {
+                    setNavbarScrolled(false);
+                }
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.navbarWrapper}>
-            <div className={styles.navbar}>
+            <div className={`${styles.navbar} ${navbarScrolled ? styles.navFixed : null}`}>
                 <div>
                     <button className={styles.navbarMenuButton} onClick={() => setNavbarOpen(true)}>
                         <FaBars size={17} />

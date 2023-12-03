@@ -12,7 +12,7 @@
     gap: 0.5rem;
     transition: background-color 0.2s ease-in-out;
     height: 44px;
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgb(0 0 0 / 0%);
 
 }
 
