@@ -1,4 +1,4 @@
-# Hubert-Eats (Uber Eats Clone)
+# Hubert-Eats (Uber Eats Clone {French Version})
 
 Hubert-Eats is a clone of Uber Eats. It is a web application that allows users to order food from restaurants and have it delivered to their door.
 </br>The goal of this project was to practice building a complex front-end application using React.js.
