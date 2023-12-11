@@ -13,10 +13,13 @@ Hubert-Eats is a clone of Uber Eats. It is a web application that allows users t
 
 ### Sliding Menu
 
-
 <img src="/doc_assets/sliding_menu.gif" width="100%" height="400" />
+
+### Modal
+
 <img src="/doc_assets/modal.gif" width="100%" height="400" />
 
+### Index Page
 <img src="/doc_assets/index_1.png" width="100%" height="400" />
 <img src="/doc_assets/index_2.png" width="100%" height="400" />
 <img src="/doc_assets/index_3.png" width="100%" height="400" />
