@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styles from './Selector.module.css';
 import {FaChevronDown} from "react-icons/fa"; // Assurez-vous de remplacer cela par le chemin correct
 
-const Selector = ({ text, options }) => {
+const Selector = ({ text, options}) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(options[0]);
     const selectorRef = useRef(null);
@@ -44,7 +44,10 @@ const Selector = ({ text, options }) => {
                                 key={index}
                                 className={styles.selectorOption}
                                 onClick={() => {
-                                    setSelectedOption(option);
+                                    if (option.onClick)
+                                        option.onClick();
+                                    else
+                                        setSelectedOption(option);
                                     setIsMenuOpen(false);
                                 }}
                             >

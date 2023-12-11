@@ -4,8 +4,38 @@ import Image from 'next/image';
 import {FaCalendar, FaClock, FaSearch} from "react-icons/fa";
 import Selector from "@/components/globals/Form/Selector/Selector";
 import PrimaryButton from "@/components/globals/Buttons/PrimaryButton/PrimaryButton";
+import {useState} from "react";
+import ModalDeliverySchedule from "@/components/globals/ModalDeliverySchedule/ModalDeliverySchedule";
 
-export default function Header() {
+export default function Header({openModalFn, closeModalFn}) {
+
+    const scheduleTypes = [
+        {
+            title: "Livrer maintenant",
+            icon: <FaClock size={17} />,
+            onClick: null
+        },
+        {
+            title: "Planifier pour plus tard",
+            icon: <FaCalendar size={17} />,
+            onClick: () => {
+                openModalFn(
+                    <ModalDeliverySchedule closeFn={closeModalFn} />
+                )
+            }
+        },
+    ];
+
+    const selectorUpdateFn = (option) => {
+        if (option.title === scheduleTypes[1].title) {
+
+        }
+        setSelectedScheduleType(option);
+        openModalFn(
+            <ModalDeliverySchedule />
+        )
+    }
+    const [selectedScheduleType, setSelectedScheduleType] = useState(scheduleTypes[0]);
     return (
         <header className={styles.header}>
             <div className={styles.headerBg}>
@@ -22,16 +52,9 @@ export default function Header() {
                             <FaSearch size={15} />
                         </div>
                     </div>
-                    <Selector options={[
-                        {
-                            title: "Livrer maintenant",
-                            icon: <FaClock size={17} />
-                        },
-                        {
-                            title: "Planifier pour plus tard",
-                            icon: <FaCalendar size={17} />}
-                    ]} />
-                    <PrimaryButton text={"Trouver un restaurant"} />
+                    <Selector options={scheduleTypes} />
+                    <PrimaryButton text={"Trouver un restaurant"} onClick={() => {
+                    }} />
 
                 </div>
                 <span>Ou <a href={"/account/login"}>Connexion</a></span>
