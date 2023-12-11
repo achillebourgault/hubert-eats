@@ -5,10 +5,6 @@ Hubert-Eats is a clone of Uber Eats. It is a web application that allows users t
 
 > This application is still in development.
 
-## Technologies Used
-
-- React.js
-
 ## Features
 
 ### Sliding Menu
